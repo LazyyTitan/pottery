@@ -8,6 +8,7 @@ class PotsController < ApplicationController
 
   # GET /pots/1 or /pots/1.json
   def show
+    @pots = Pot.all
   end
 
   # GET /pots/new
@@ -65,6 +66,6 @@ class PotsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pot_params
-      params.require(:pot).permit(:class, :booked, :class_type, :user_name, :user_id)
+      params.require(:pot).permit(:lesson, :booked, :class_type, :user_name, :user_id)
     end
 end

@@ -11,32 +11,37 @@
     </div>
   <% end %>
 
+ 
   <div>
-    <%= form.label :class, style: "display: block" %>
-    <%= form.text_field :class %>
+    <%= form.label :lesson, style: "display: block" %>
+    <%= form.text_field @lesson, autofocus: true, autocomplete: "lesson", class:'form-control', :readonly=>true, :value=> @lesson, :disabled => "disabled" %>
+
   </div>
 
   <div>
     <%= form.label :booked, style: "display: block" %>
-    <%= form.check_box :booked %>
+    <%= form.check_box :booked, class:'form-control' %>
   </div>
 
   <div>
     <%= form.label :class_type, style: "display: block" %>
-    <%= form.text_field :class_type %>
+    <%= form.text_field :class_type, class:'form-control', :value => @class_type %>
   </div>
 
   <div>
     <%= form.label :user_name, style: "display: block" %>
-    <%= form.text_field :user_name %>
+    <%= form.text_field :user_name, autofocus: true, autocomplete: "user_name", class:'form-control' %>
   </div>
 
   <div>
     <%= form.label :user_id, style: "display: block" %>
-    <%= form.number_field :user_id %>
+    <%= form.number_field :user_id, class:'form-control' %>
   </div>
 
   <div>
-    <%= form.submit %>
+    
+    <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+ Book
+<% end %>
   </div>
 <% end %>

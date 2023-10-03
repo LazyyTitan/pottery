@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema[7.0].define(version: 2023_10_01_122426) do
   create_table "pots", force: :cascade do |t|
-    t.string "class"
+    t.string "lesson"
     t.boolean "booked"
     t.string "class_type"
     t.string "user_name"

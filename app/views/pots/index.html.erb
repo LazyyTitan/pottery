@@ -1,14 +1,102 @@
-<p style="color: green"><%= notice %></p>
+<div class="col-md-6 offset-md-3">
+  
+  <p style="color: green"><%= notice %></p>
 
-<h1>Pots</h1>
+  <h1>Classes Available</h1>
+</div>
+ <div class="jumbotron m-3 bg-light p-5">
+    <h2>Handbuilding classes</h2>
+      <p>Learn techniques such as slab, coil and pinch to create unique creations out of clay</p>
 
-<div id="pots">
-  <% @pots.each do |pot| %>
-    <%= render pot %>
-    <p>
-      <%= link_to "Show this pot", pot %>
-    </p>
-  <% end %>
+
+<div class="row">
+  <div class="col-sm-4 mb-3 mb-sm-0">
+     <div class="card" style="width: 18rem;">  
+        <%= image_tag("sman2.jpg", :alt => "snowman") %>
+        <div class="card-body">
+          <h5 class="card-title">Christmas Decorations</h5>
+          <p class="card-text">Create your own slab built Christmas decorations.</p>
+         
+          <%= link_to "Book Now", new_pot_path, class: "btn btn-primary", :lesson =>"Christmas Decorations", :class_type => "Handbuilding" %>
+
+
+
+        </div>
+      </div>
+  </div>
+  <div class="col-sm-4"> 
+    <div class="card" style="width: 18rem;">  
+        <%= image_tag("angels.jpg", :alt => "angels") %>
+        <div class="card-body">
+          <h5 class="card-title">Christmas Ornaments</h5>
+          <p class="card-text">Create your own slab, pinch or coil Christmas angel ornaments</p>
+          <%= link_to "Book Now", new_pot_path, class: "btn btn-primary" %>
+        </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card" style="width: 18rem;">  
+        <%= image_tag("sculpture.jpg", :alt => "sculpture") %>
+        <div class="card-body">
+          <h5 class="card-title">Sculpture Class</h5>
+          <p class="card-text">Create your own slab, pinch or coil Sculpture, choose from terracotta, earthenware or stoneware clay</p>
+          <%= link_to "Book Now", new_pot_path, class: "btn btn-primary" %>
+        </div>
+    </div>
+
+  </div>
 </div>
 
-<%= link_to "New pot", new_pot_path %>
+
+
+
+
+
+
+  </div>
+
+  <div class="jumbotron m-3 bg-light p-5">
+    <h2>Wheel classes</h2>
+    <p>Try your hand at the potters wheel and make your own mug</p>
+
+
+
+
+<div class="row">
+  <div class="col-sm-4 mb-3 mb-sm-0">
+     <div class="card" style="width: 18rem;">  
+        <%= image_tag("thrown2.jpg", :alt => "mug") %>
+        <div class="card-body">
+          <h5 class="card-title">Make your own Mug</h5>
+          <p class="card-text">Make your very own handmade wheel thrown mug, learn to center and throw</p>
+         <%= link_to "Book Now", new_pot_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card" style="width: 18rem;">  
+        <%= image_tag("gonk.jpg", :alt => "gonk") %>
+        <div class="card-body">
+          <h5 class="card-title">Christmas Gonk</h5>
+          <p class="card-text">Create your own slab, pinch or coil Christmas gonk ornaments</p>
+          <%= link_to "Book Now", new_pot_path, class: "btn btn-primary" %>
+        </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card" style="width: 18rem;">  
+        <%= image_tag("bowl.jpg", :alt => "bowl") %>
+        <div class="card-body">
+          <h5 class="card-title">Stoneware bowl</h5>
+          <p class="card-text">Learn to center large quantities of clay and create your own stoneware bowl</p>
+          <%= link_to "Book Now", new_pot_path, class: "btn btn-primary" %>
+        </div>
+    </div>
+
+  </div>
+</div> 
+
+
+</div>

@@ -1,27 +1,34 @@
 <div id="<%= dom_id pot %>">
-  <p>
-    <strong>Class:</strong>
-    <%= pot.class %>
-  </p>
+ 
+  <table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Lesson</th>
+      <th>Booked</th>
+      <th>Class Type</th>
+      <th>User Name</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+   <tbody>
 
-  <p>
-    <strong>Booked:</strong>
-    <%= pot.booked %>
-  </p>
+ <tr>
+          <td><%= pot.lesson %></td>
+          <td><%= pot.booked %></td>
+          <td><%= pot.class_type %></td>
+          
+          <td><%= pot.user_name %></td>
 
-  <p>
-    <strong>Class type:</strong>
-    <%= pot.class_type %>
-  </p>
 
-  <p>
-    <strong>User name:</strong>
-    <%= pot.user_name %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= pot.user_id %>
-  </p>
+          <td><center><%= link_to 'Edit', edit_pot_path(pot) %></center></td>
+          <td><center><%= link_to 'Cancel Class', pot, method: :delete, data: { confirm: 'Are you sure you want to cancel?' } %></center></td>
+        </tr>
+      </tbody>
+    </table>
 
 </div>
+
+
+
+
+<%= link_to "New Class", pots_path, class: 'btn btn-secondary' %>

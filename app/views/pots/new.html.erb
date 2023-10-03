@@ -1,9 +1,16 @@
-<h1>New pot</h1>
+<div class="col-md-6 offset-md-3">
+  <div class="jumbotron m-3 bg-light p-5">
 
-<%= render "form", pot: @pot %>
+    <h1>New pot Book Class</h1>
 
-<br>
+    <div class="form-group">
+      <%= render "form", pot: @pot %>
 
-<div>
-  <%= link_to "Back to pots", pots_path %>
+      <br>
+
+      <div>
+        <%= link_to "Back to pots", pots_path %>
+      </div>
+    </div>
+  </div>
 </div>

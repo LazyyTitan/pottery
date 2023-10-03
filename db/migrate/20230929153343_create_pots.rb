@@ -1,7 +1,7 @@
 class CreatePots < ActiveRecord::Migration[7.0]
   def change
     create_table :pots do |t|
-      t.string :class
+      t.string :lesson
       t.boolean :booked
       t.string :class_type
       t.string :user_name

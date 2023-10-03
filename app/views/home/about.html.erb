@@ -1,2 +1,18 @@
-<h1>About Project</h1>
-<p>This application is built using Ruby on Rails, Bootstrap.</p>
+<h1>My Booked Classes</h1>
+
+  <div id="pots">
+    <% @pots.each do |pot| %>
+      <%= render pot %>
+      <p>
+       
+        <%= @pot %><br/>
+
+      </p>
+
+
+
+
+    <% end %>
+  </div>
+
+
