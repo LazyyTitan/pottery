@@ -263,7 +263,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jquery-rails
-  pg
+  pg (~> 1.5, >= 1.5.4)
   puma (~> 5.0)
   rails (~> 7.0.8)
   selenium-webdriver
