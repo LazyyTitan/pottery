@@ -26,7 +26,7 @@ class PotsController < ApplicationController
 
     respond_to do |format|
       if @pot.save
-        format.html { redirect_to pot_url(@pot), notice: "Pot was successfully created." }
+        format.html { redirect_to pot_url(@pot), notice: "Class was successfully booked." }
         format.json { render :show, status: :created, location: @pot }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class PotsController < ApplicationController
   def update
     respond_to do |format|
       if @pot.update(pot_params)
-        format.html { redirect_to pot_url(@pot), notice: "Pot was successfully updated." }
+        format.html { redirect_to pot_url(@pot), notice: "Class booking was successfully updated." }
         format.json { render :show, status: :ok, location: @pot }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,10 +53,19 @@ class PotsController < ApplicationController
     @pot.destroy
 
     respond_to do |format|
-      format.html { redirect_to pots_url, notice: "Pot was successfully destroyed." }
+      format.html { redirect_to pots_url, notice: "Class booking was successfully destroyed." }
       format.json { head :no_content }
     end
   end
+
+ def correct_user
+    @ticker = current_user.pots.find_by(id: params[:id])
+    redirect_to pots_path, notice: "Not authorized to edit this class!" if @ticker.nil?
+  end
+
+def setLesson
+  :lesson
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.

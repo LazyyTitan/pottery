@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This App allowers a user to create an account and book pottery lessons
 
-Things you may want to cover:
+User functionality includes:
 
-* Ruby version
+* Create, Edit, Delete an account
 
-* System dependencies
+* book a pottery class
 
-* Configuration
+* View, Edit, Delete booked classes
 
-* Database creation
+This project is not yet complete.
+I want to add the following:
 
-* Database initialization
+* When the 'Book Now' button/ link is clicked in the Pottery Classes page, I want to set the lesson variable to the name of the class. Book Now is of type 'submit'. When clicked it will go to the book class page. I want the form on this page to display the lesson name as the lesson variable that will be set on the button click from the previous page. Currently testing out this feature.
 
-* How to run the test suite
+* Form dropdown selection to chose the class type when making a booking. Currently this is not saving the selection to my class_type variable in my database. Currently working on this issue.
 
-* Services (job queues, cache servers, search engines, etc.)
+This app was written using the following: 
 
-* Deployment instructions
+* Ruby
 
-* ...
+* Bootstrap
+
+* HTML
+
+* CSS
+
+* Devise DB gem
+
+* SQLite
+
+* Render
+
+Render link: 

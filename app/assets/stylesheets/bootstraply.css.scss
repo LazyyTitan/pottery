@@ -5,3 +5,15 @@ img {
     height: 200px;
     object-fit: cover;
 }
+ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+body{
+
+  background-color: #ffd9cc;
+  opacity: 2;
+  
+}

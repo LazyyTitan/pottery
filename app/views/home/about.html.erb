@@ -1,18 +1,38 @@
 <h1>My Booked Classes</h1>
 
-  <div id="pots">
-    <% @pots.each do |pot| %>
-      <%= render pot %>
-      <p>
-       
-        <%= @pot %><br/>
+  <table class="table  table-bordered table-hover">
+  <thead class="table-light">
+    <tr>
+      <th>Lesson</th>
+      <th>Class Type</th>
+      <th>User Name</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+   <tbody>
 
-      </p>
+   <% @pots.each do |pot| %>
+      <% if pot.user_id == current_user.id %>
+ <tr>
+          <td><%= pot.lesson %></td>
+          <td><%= pot.class_type %></td>
+          
+          <td><%= pot.user_name %></td>
 
 
+          <td><center><%= link_to 'Edit this booking', edit_pot_path(pot) %></center></td>
+          <td><center><%= link_to 'Cancel Class', pot, method: :delete, data: { confirm: 'Are you sure you want to cancel?' } %></center></td>
+        </tr>
+        <% end %>
+<% end %>
+      </tbody>
+    </table>
+<%= link_to "Book Another Class", pots_path, class: 'btn btn-secondary' %>
+
+<br/><br/><br/>
+<%= link_to 'Delete All Classes', home_trash_em_all_path, class: 'btn btn-danger', data: {confirm: 'Are you sure? '} %>
+</div>
 
 
-    <% end %>
-  </div>
 
 
