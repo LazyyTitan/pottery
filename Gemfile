@@ -74,5 +74,11 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-  gem "pg"
+  gem "pg", "~> 1.5", ">= 1.5.4"
+end
+
+
+group :productin do
+  gem "postgresql", "~> 1.0"
+  gem "pg", "~> 1.5", ">= 1.5.4"
 end
