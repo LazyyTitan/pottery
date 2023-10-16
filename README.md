@@ -2,6 +2,10 @@
 
 This App allowers a user to create an account and book pottery lessons
 
+Live Render link: https://potteryapp.onrender.com/
+
+**NOTE: I Need to fix the flash message notification - Not closing when pressed after last commit.**
+
 User functionality includes:
 
 * Create, Edit, Delete an account
@@ -22,10 +26,6 @@ This app was written using the following:
 
 * Devise DB gem
 
-Need to fix the flash message notification. Not closing when pressed.
-
 * SQLite
 
 * Render
-
-Render link: 
