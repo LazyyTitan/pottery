@@ -19,35 +19,35 @@
 
       <div class="row">
         <div class="col-sm-4 mb-3 mb-sm-0">
-           <div class="card" style="width: 18rem;, height: 18rem;">  
+           <div class="card">  
               <%= image_tag("sman2.jpg", :alt => "snowman") %>
               <div class="card-body">
                 <h5 class="card-title">Christmas Decorations</h5>
                 <p class="card-text">Make your very own Christmas tree decorations. Choose form a wide variety of cutters and stencils</p>
                
-                <center><%= link_to "Book Now", new_pot_path, class: "btn btn-primary",:lesson =>"Christmas Decorations", :class_type => "Handbuilding", type: 'submit' %></center>
+                <center><%= link_to "Book Now", new_pot_path(@post, :lesson => "Christmas Decorations", :class_type => "Handbuilding"), class: "btn btn-primary", type: 'submit' %></center>
  
               </div>
             </div>
       </div>
       <div class="col-sm-4"> 
-        <div class="card" style="width: 18rem;">  
+        <div class="card">  
             <%= image_tag("angels.jpg", :alt => "angels") %>
             <div class="card-body">
               <h5 class="card-title">Christmas Ornaments</h5>
               <p class="card-text">Create your own slab, pinch or coil Christmas angel ornaments</p>
-              <center><%= link_to "Book Now", new_pot_path, class: "btn btn-primary" %></center>
+              <center><%= link_to "Book Now", new_pot_path(@post, :lesson => "Christmas Ornaments", :class_type => "Handbuilding"), class: "btn btn-primary" %></center>
             </div>
         </div>
       </div>
 
       <div class="col-sm-4">
-        <div class="card" style="width: 18rem;">  
+        <div class="card">  
             <%= image_tag("sculpture.jpg", :alt => "sculpture") %>
             <div class="card-body">
               <h5 class="card-title">Sculpture Class</h5>
               <p class="card-text">Want to try something a little different? Create your own slab, pinch or coil Sculpture, choose from terracotta, earthenware or stoneware clay</p>
-              <center><%= link_to "Book Now", new_pot_path, class: "btn btn-primary" %></center>
+              <center><%= link_to "Book Now", new_pot_path(@post, :lesson => "Sculpture Class", :class_type => "Handbuilding"), class: "btn btn-primary" %></center>
             </div>
         </div>
       </div>
@@ -70,33 +70,33 @@
 
     <div class="row">
       <div class="col-sm-4 mb-3 mb-sm-0">
-         <div class="card" style="width: 18rem;">  
+         <div class="card">  
             <%= image_tag("thrown2.jpg", :alt => "mug") %>
             <div class="card-body">
               <h5 class="card-title">Make your own Mug</h5>
               <p class="card-text">Make your very own handmade wheel thrown mug, learn to center and throw</p>
-             <center><%= link_to "Book Now", new_pot_path, class: "btn btn-primary" %></center>
+             <center><%= link_to "Book Now", new_pot_path(@post, :lesson => "Make your own Mug", :class_type => "Wheel"), class: "btn btn-primary" %></center>
             </div>
           </div>
       </div>
       <div class="col-sm-4">
-        <div class="card" style="width: 18rem;">  
+        <div class="card">  
             <%= image_tag("gonk.jpg", :alt => "gonk") %>
             <div class="card-body">
               <h5 class="card-title">Christmas Gonk</h5>
               <p class="card-text">Create your own slab, pinch or coil Christmas gonk ornaments</p>
-              <center><%= link_to "Book Now", new_pot_path, class: "btn btn-primary" %></center>
+              <center><%= link_to "Book Now", new_pot_path(@post, :lesson => "Christmas Gonk", :class_type => "Wheel"), class: "btn btn-primary" %></center>
             </div>
         </div>
       </div>
 
       <div class="col-sm-4">
-        <div class="card" style="width: 18rem;">  
+        <div class="card">  
             <%= image_tag("bowl.jpg", :alt => "bowl") %>
             <div class="card-body">
               <h5 class="card-title">Stoneware bowl</h5>
               <p class="card-text">Learn to center large quantities of clay and create your own stoneware bowl</p>
-              <center><%= link_to "Book Now", new_pot_path, class: "btn btn-primary" %></center>
+              <center><%= link_to "Book Now", new_pot_path(@post, :lesson => "Stoenware bowl", :class_type => "Wheel"), class: "btn btn-primary" %></center>
             </div>
         </div>
       </div>
@@ -121,7 +121,7 @@
 
       <div class="row">
         <div class="col-sm-4 mb-3 mb-sm-0">
-           <div class="card" style="width: 18rem;">  
+           <div class="card">  
               <%= image_tag("sman2.jpg", :alt => "snowman") %>
               <div class="card-body">
                 <h5 class="card-title">Christmas Decorations</h5>
@@ -130,7 +130,7 @@
             </div>
         </div>
         <div class="col-sm-4"> 
-          <div class="card" style="width: 18rem;">  
+          <div class="card">  
               <%= image_tag("angels.jpg", :alt => "angels") %>
               <div class="card-body">
                 <h5 class="card-title">Christmas Ornaments</h5>
@@ -141,7 +141,7 @@
         </div>
 
         <div class="col-sm-4">
-          <div class="card" style="width: 18rem;">  
+          <div class="card">  
               <%= image_tag("sculpture.jpg", :alt => "sculpture") %>
               <div class="card-body">
                 <h5 class="card-title">Sculpture Class</h5>
@@ -168,7 +168,7 @@
     <br/>
   <div class="row">
     <div class="col-sm-4 mb-3 mb-sm-0">
-       <div class="card" style="width: 18rem;">  
+       <div class="card">  
           <%= image_tag("thrown2.jpg", :alt => "mug") %>
           <div class="card-body">
             <h5 class="card-title">Make your own Mug</h5>
@@ -177,7 +177,7 @@
         </div>
     </div>
     <div class="col-sm-4">
-      <div class="card" style="width: 18rem;">  
+      <div class="card">  
           <%= image_tag("gonk.jpg", :alt => "gonk") %>
           <div class="card-body">
             <h5 class="card-title">Christmas Gonk</h5>
@@ -188,7 +188,7 @@
       <br/><center><%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-primary" %></center>
     </div>
     <div class="col-sm-4">
-      <div class="card" style="width: 18rem;">  
+      <div class="card">  
           <%= image_tag("bowl.jpg", :alt => "bowl") %>
           <div class="card-body">
             <h5 class="card-title">Stoneware bowl</h5>

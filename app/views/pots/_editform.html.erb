@@ -14,13 +14,13 @@
  
   <div>
     <%= form.label :lesson, style: "display: block" %>
-    <%= form.text_field :lesson, autocomplete: "lesson", class:'form-control', value: params[:lesson] %>
+    <%= form.text_field :lesson, autocomplete: "lesson", class:'form-control', value: params[:lesson], value: pot.lesson %>
 
   </div>
 
   <div>
     <%= form.label :class_type, style: "display: block" %>
-    <%= form.text_field :class_type, autocomplete: "class_type", class:'form-control', value: params[:class_type] %>
+    <%= form.text_field :class_type, autocomplete: "class_type", class:'form-control', value: params[:class_type], value: pot.class_type %>
   </div>
 
   <div>
@@ -35,7 +35,7 @@
   <div>
     
     <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
- Book Class
+ Edit Class
 <% end %>
   </div>
 <% end %>

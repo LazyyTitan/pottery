@@ -1,5 +1,7 @@
-class PotsController < ApplicationController
+ class PotsController < ApplicationController
   before_action :set_pot, only: %i[ show edit update destroy ]
+  #before_action :correct_user, only: %i[edit update destroy]
+  before_action :authenticate_user!
 
   # GET /pots or /pots.json
   def index
@@ -49,19 +51,20 @@ class PotsController < ApplicationController
   end
 
   # DELETE /pots/1 or /pots/1.json
-  def destroy
+ 
+ def destroy
+    @pot = Pot.find(params[:id])
     @pot.destroy
 
-    respond_to do |format|
-      format.html { redirect_to pots_url, notice: "Class booking was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to pots_url
   end
 
- def correct_user
+
+  def correct_user
     @ticker = current_user.pots.find_by(id: params[:id])
     redirect_to pots_path, notice: "Not authorized to edit this class!" if @ticker.nil?
   end
+ 
 
 def setLesson
   :lesson

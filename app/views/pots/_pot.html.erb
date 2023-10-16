@@ -5,28 +5,18 @@
     <tr>
       <th>Lesson</th>
       <th>Class Type</th>
-      <th>User Name</th>
+      <th>Email</th>
       <th colspan="2"></th>
     </tr>
   </thead>
    <tbody>
-
- <tr>
+      <tr>
           <td><%= pot.lesson %></td>
-          <td><%= pot.class_type %></td>
-          
-          <td><%= pot.user_name %></td>
-
-
+          <td><%= pot.class_type %></td>  
+          <td><%= current_user.email %></td>
           <td><center><%= link_to 'Edit booking', edit_pot_path(pot) %></center></td>
-          <td><center><%= link_to 'Cancel Class', pot, method: :delete, data: { confirm: 'Are you sure you want to cancel?' } %></center></td>
         </tr>
       </tbody>
     </table>
-
 </div>
-
-
-
-
 <%= link_to "Back to my Classes", home_about_path, class: 'btn btn-secondary' %>
